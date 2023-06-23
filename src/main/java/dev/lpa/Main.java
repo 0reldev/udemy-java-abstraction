@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
 //        Animal animal = new Animal("animal", "big", 100);     // Abstract classes can't be instanced.
         Dog dog = new Dog("wolf", "big", 100);
         dog.makeNoise();
@@ -19,8 +18,13 @@ public class Main {
         animals.add(new Fish("Barracuda", "big", 75));
         animals.add(new Dog("Pug", "small", 20));
 
+        animals.add(new Horse("Clydesdale", "large", 1000));
+
         for(Animal animal : animals) {
             doAnimalStuff(animal);
+            if (animal instanceof Mammal currentMammal) {
+                currentMammal.shedHair();
+            }
         }
     }
 
